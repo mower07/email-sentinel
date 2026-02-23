@@ -1,3 +1,5 @@
+🇺🇸 English | [🇷🇺 Русский](README.ru.md)
+
 # 🛡️ Email Sentinel
 
 **50-pattern email security skill for AI agents**
