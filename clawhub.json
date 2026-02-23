@@ -1,0 +1,12 @@
+{
+  "name": "Email Sentinel",
+  "tagline": "50-pattern email security layer for AI agents",
+  "description": "Email Sentinel gives your AI agent a structured threat detection system for processing incoming email. Without a security layer, an agent reading your inbox is vulnerable to prompt injection, BEC attacks, fake invoices, phishing, and data exfiltration attempts.\n\nThe skill includes 50 documented attack patterns (from classic phishing to OAuth consent grant and IDN homograph attacks), an executable 5-phase scan checklist the agent runs on every email, and a deep-dive reference for investigating detected threats.\n\nBattle-tested on ~1,000 real business emails. No external API required — pure knowledge skill, works with any email pipeline.",
+  "category": "security",
+  "tags": ["email", "security", "phishing", "agent-safety", "prompt-injection", "BEC"],
+  "version": "1.0.0",
+  "license": "MIT",
+  "pricing": "free",
+  "support_url": "https://github.com/mower07/email-sentinel/issues",
+  "homepage": "https://github.com/mower07/email-sentinel"
+}
