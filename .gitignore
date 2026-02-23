@@ -1,0 +1,21 @@
+# Secrets & tokens
+*.json.bak
+.env
+credentials.json
+token*.json
+*_token.json
+
+# Logs
+*.log
+*.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
