@@ -1,0 +1,65 @@
+{
+  "_comment": "Email Sentinel config. Copy to config.json and fill in your values.",
+
+  "telegram": {
+    "_comment": "Bot token: set via env TELEGRAM_BOT_TOKEN (recommended) or 'direct' with token below",
+    "bot_token_env": "TELEGRAM_BOT_TOKEN",
+    "bot_token_direct": "",
+    "targets": {
+      "owner_chat_id": 0,
+      "support_chat_id": null,
+      "support_chat_thread_id": null,
+      "support_mention": null,
+      "partners_chat_id": null,
+      "sales_chat_id": null,
+      "sales_chat_thread_id": null,
+      "sales_mention": null
+    }
+  },
+
+  "accounts": {
+    "_comment": "Gmail: kind=gmail, token_path to OAuth2 JSON. Yandex: kind=imap, password_env=ENV_VAR_NAME",
+    "personal": {
+      "kind": "gmail",
+      "email": "user@gmail.com",
+      "token_path": "~/.google_token.json",
+      "label": "personal",
+      "logic": "personal"
+    }
+  },
+
+  "classification": {
+    "_comment": "Customize these lists for your context",
+    "trusted_internal_domains": [],
+    "spam_senders": [],
+    "spam_sender_domains": [],
+    "archive_senders": [],
+    "archive_sender_domains": [],
+    "newsletter_sender_domains": [],
+    "supplier_keywords": [
+      "коммерческое предложение", "прайс", "КП", "поставка", "оптовые цены",
+      "proposal", "price list", "quotation", "wholesale"
+    ],
+    "lead_subject_keywords": [],
+    "lead_subject_regex": "",
+    "routing": {
+      "_comment": "Map action names to telegram targets. true = use that target, false = skip",
+      "forward_suppliers_to_partners_chat": false,
+      "forward_leads_to_sales_chat": false,
+      "alert_support_on_api_errors": false
+    }
+  },
+
+  "limits": {
+    "max_emails_per_run": 100,
+    "email_bomb_threshold": 150,
+    "promotions_cleanup_per_run": 30
+  },
+
+  "logs": {
+    "processing_log": "~/.email-sentinel/email-runs.jsonl",
+    "show_queue": "~/.email-sentinel/show-queue.json",
+    "digest_queue": "~/.email-sentinel/digest-queue.json",
+    "leads_log": "~/.email-sentinel/leads.md"
+  }
+}
